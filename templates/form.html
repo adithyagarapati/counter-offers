@@ -1,0 +1,36 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fill in Template Values</h1>
+        <p class="document-info">
+            Document: {{ company }} / {{ filename }}
+        </p>
+        
+        <form action="{{ url_for('generate_document') }}" method="post" class="placeholder-form">
+            <input type="hidden" name="company" value="{{ company }}">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            
+            {% for placeholder in placeholders %}
+                <div class="form-group">
+                    <label for="{{ placeholder }}">{{ placeholder }}</label>
+                    <input type="text" id="{{ placeholder }}" name="{{ placeholder }}" required>
+                </div>
+            {% endfor %}
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Generate Document</button>
+                <a href="{{ url_for('index') }}" class="btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

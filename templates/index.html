@@ -1,0 +1,32 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Template Manager</h1>
+        <div class="directory-structure">
+            {% for company, files in companies.items() %}
+                <div class="company-folder">
+                    <h2>{{ company }}</h2>
+                    <ul class="file-list">
+                        {% for file in files %}
+                            <li>
+                                <a href="{{ url_for('select_document', company=company, filename=file) }}">
+                                    {{ file }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

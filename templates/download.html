@@ -1,0 +1,24 @@
+<!-- templates/download.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Generated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container success-container">
+        <div class="success-message">
+            <h1>Document Generated Successfully!</h1>
+            <p>Your document is ready to download.</p>
+            
+            <div class="action-buttons">
+                <a href="{{ url_for('download_file', filename=filename) }}" class="btn-primary">Download Document</a>
+                <a href="{{ url_for('index') }}" class="btn-secondary">Return to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

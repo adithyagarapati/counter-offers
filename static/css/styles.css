@@ -1,0 +1,186 @@
+/* static/css/styles.css */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #27ae60;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+  }
+  
+  h2 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Directory Structure */
+  .directory-structure {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .company-folder {
+    background-color: var(--light-color);
+    padding: 15px;
+    border-radius: 6px;
+    transition: var(--transition);
+  }
+  
+  .company-folder:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+  
+  .file-list {
+    list-style: none;
+  }
+  
+  .file-list li {
+    margin-bottom: 8px;
+  }
+  
+  .file-list a {
+    display: block;
+    padding: 8px 12px;
+    background-color: white;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition);
+  }
+  
+  .file-list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Form Styles */
+  .document-info {
+    background-color: var(--light-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .placeholder-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button Styles */
+  .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary:hover {
+    background-color: #bdc3c7;
+    transform: translateY(-2px);
+  }
+  
+  /* Success Page */
+  .success-container {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .success-message {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .success-message h1 {
+    color: var(--success-color);
+    border-bottom: none;
+  }
+  
+  .success-message p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
