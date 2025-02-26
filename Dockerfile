@@ -21,9 +21,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Create folders if they don't exist
-RUN mkdir -p docs/citiustech docs/ideas2it docs/smc-2 generated
-
 # Set permissions
 RUN chmod -R 755 /app
 
